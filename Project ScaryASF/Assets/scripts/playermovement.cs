@@ -27,6 +27,7 @@ public class playermovement : MonoBehaviour
     {
         charactercontrol = GetComponent<CharacterController>();
         firstpersoncam = GetComponentInChildren<Camera>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class playermovement : MonoBehaviour
     {
         forwardinput = Input.GetAxisRaw("Vertical");
         strafeinput = Input.GetAxisRaw("Horizontal");
+        jumping = Input.GetButtonDown("Jump");
         Movement();
         CameraMovement();
         JumpNGrav();
@@ -44,6 +46,8 @@ public class playermovement : MonoBehaviour
         Vector3 direction = (transform.forward * forwardinput
                             + transform.right * strafeinput).normalized
                              * movespeed * Time.deltaTime;
+        direction += Vector3.up * verticalveloc * Time.deltaTime;
+        charactercontrol.Move(direction);
     }
 
 
@@ -70,6 +74,19 @@ public class playermovement : MonoBehaviour
             if(jumping)
             {
                 verticalveloc = Mathf.Sqrt(jump * -2f * Physics.gravity.y);
+            }
+        }
+        else
+        {
+            if(verticalveloc < terminalveloc)
+            {
+                float gravemulti = 1;
+                if (charactercontrol.velocity.y < -1)
+                {
+                    gravemulti = gravspeed;
+
+                }
+                verticalveloc += Physics.gravity.y * gravemulti * Time.deltaTime;
             }
         }
     }
