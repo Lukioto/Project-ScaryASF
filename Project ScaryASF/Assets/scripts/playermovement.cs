@@ -9,10 +9,13 @@ public class playermovement : MonoBehaviour
     public float gravspeed = 2f;
     public float mousesensitivity = 2.0f;
     public float pitchRange = 60.0f;
+    public float sprintspeed = 10f;
+    public float sprinttime = 900f;
 
     private float forwardinput;
     private float strafeinput;
     private bool jumping;
+    private float walkspeed;
 
     private float terminalveloc = 53f;
     private float verticalveloc;
@@ -28,11 +31,13 @@ public class playermovement : MonoBehaviour
         charactercontrol = GetComponent<CharacterController>();
         firstpersoncam = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
+        walkspeed = movespeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        sprinting();
         forwardinput = Input.GetAxisRaw("Vertical");
         strafeinput = Input.GetAxisRaw("Horizontal");
         jumping = Input.GetButtonDown("Jump");
@@ -88,6 +93,26 @@ public class playermovement : MonoBehaviour
                 }
                 verticalveloc += Physics.gravity.y * gravemulti * Time.deltaTime;
             }
+        }
+    }
+
+    void sprinting()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && sprinttime > 0)
+        {
+            
+            movespeed = sprintspeed;
+            sprinttime--;
+            
+        }
+        else
+        {
+            movespeed = walkspeed;
+            if (sprinttime < 1000)
+            {
+                sprinttime++;
+            }
+            
         }
     }
 }
