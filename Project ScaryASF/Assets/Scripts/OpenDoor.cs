@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
@@ -7,8 +8,9 @@ public class OpenDoor : MonoBehaviour
     public GameObject Door;
     public Animator animator;
 
-    private bool inRange = false;
-    private bool doorOpen = false;
+    private bool inRange;
+    private bool doorOpen;
+    private bool playerInput;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,15 +30,16 @@ public class OpenDoor : MonoBehaviour
     {
         animator.SetBool("DoorOpen", doorOpen);
         animator.SetBool("InRange", inRange);
-        Debug.Log(inRange);
+        animator.SetBool("PlayerInput", playerInput);
 
         if (Input.GetKeyDown("e"))
         {
-            if (inRange == true && doorOpen == false)
+            playerInput = true;
+            if (doorOpen == false)
             {
                 doorOpen = true;
             }
-            else if (inRange == true && doorOpen == true)
+            else if (doorOpen == true)
             {
                 doorOpen = false;
             }

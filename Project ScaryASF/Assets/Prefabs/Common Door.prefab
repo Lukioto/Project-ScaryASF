@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2500697539035687006}
   m_Layer: 0
   m_Name: Common Door
-  m_TagString: Untagged
+  m_TagString: DoorDistance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,8 +151,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.542652, y: 6.5700936, z: 5.067894}
-  m_Center: {x: 0, y: 0, z: -1}
+  m_Size: {x: 8, y: 11, z: 8}
+  m_Center: {x: 0.14200687, y: 2.942525, z: -1}
 --- !u!95 &5355814376168388471
 Animator:
   serializedVersion: 5
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f76d5d78a44d6a44b59ba6eb38360eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
-  animator: {fileID: 0}
+  Door: {fileID: 3307860166187671936}
+  animator: {fileID: 5355814376168388471}
 --- !u!1 &3979267224785199184
 GameObject:
   m_ObjectHideFlags: 0
