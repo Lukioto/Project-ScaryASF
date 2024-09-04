@@ -22,5 +22,7 @@ public class flashlight : MonoBehaviour
         {
             playermovement.haslight = true;
         }
+
+        Destroy(gameObject);
     }
 }

@@ -40,7 +40,7 @@ public class playermovement : MonoBehaviour
         firstpersoncam = GetComponentInChildren<Camera>();
         Cursor.lockState = CursorLockMode.Locked;
         walkspeed = movespeed;
-
+        flashlight = GetComponentInChildren<Light>();
     }
 
     // Update is called once per frame
@@ -53,6 +53,7 @@ public class playermovement : MonoBehaviour
         Movement();
         CameraMovement();
         JumpNGrav();
+        lightfunc();
     }
 
     void Movement()
@@ -136,6 +137,17 @@ public class playermovement : MonoBehaviour
                 canrun = true;
             }
 
+        }
+    }
+    void lightfunc()
+    {
+        if (haslight == false)
+        {
+            flashlight.enabled = false;
+        }
+        else
+        {
+            flashlight.enabled = true;
         }
     }
 }
