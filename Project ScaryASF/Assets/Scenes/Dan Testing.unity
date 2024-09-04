@@ -395,10 +395,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 881051432, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
-      propertyPath: m_SpotAngle
-      value: 36.4
-      objectReference: {fileID: 0}
     - target: {fileID: 1175174245751746233, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -446,10 +442,6 @@ PrefabInstance:
     - target: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
