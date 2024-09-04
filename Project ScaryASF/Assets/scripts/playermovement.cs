@@ -15,6 +15,7 @@ public class playermovement : MonoBehaviour
     public float sprintcooldown;
 
     static public bool haslight = false;
+    public bool lighton = false;
     private Light flashlight;
 
     private bool canrun = true;
@@ -141,11 +142,24 @@ public class playermovement : MonoBehaviour
     }
     void lightfunc()
     {
-        if (haslight == false)
+        if (haslight == false || lighton == false)
         {
             flashlight.enabled = false;
+
         }
-        else
+        if (Input.GetButtonDown("Fire1") && haslight == true && lighton == false)
+        {
+            lighton = true;
+            Debug.Log("lights on");
+        }
+
+        else if (Input.GetButtonDown("Fire1") && lighton == true)
+        {
+            lighton = false;
+
+        }
+
+        if (haslight == true && lighton == true)
         {
             flashlight.enabled = true;
         }
