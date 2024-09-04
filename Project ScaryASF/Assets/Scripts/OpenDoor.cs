@@ -10,10 +10,25 @@ public class OpenDoor : MonoBehaviour
     private bool inRange = false;
     private bool doorOpen = false;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            inRange = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            inRange = false;
+        }
+    }
     private void Update()
     {
         animator.SetBool("DoorOpen", doorOpen);
         animator.SetBool("InRange", inRange);
+        Debug.Log(inRange);
 
         if (Input.GetKeyDown("e"))
         {
