@@ -112,7 +112,6 @@ public class playermovement : MonoBehaviour
         else if (sprinttime == 0 && sprintcooldown == 0 && canrun == true)
         {
             sprintcooldown = 500;
-            sprinttime = -5000;
             canrun = false;
         }
         else
@@ -127,9 +126,9 @@ public class playermovement : MonoBehaviour
                 sprintcooldown--;
 
             }
-            else if(canrun == false)
+            else if(canrun == false && sprintcooldown == 0)
             {
-
+                canrun = true;
             }
 
         }
