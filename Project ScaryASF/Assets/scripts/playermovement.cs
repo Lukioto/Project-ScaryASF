@@ -9,8 +9,12 @@ public class playermovement : MonoBehaviour
     public float gravspeed = 2f;
     public float mousesensitivity = 2.0f;
     public float pitchRange = 60.0f;
+
     public float sprintspeed = 10f;
     public float sprinttime = 900f;
+    public float sprintcooldown;
+
+    private bool canrun = true;
 
     private float forwardinput;
     private float strafeinput;
@@ -98,12 +102,18 @@ public class playermovement : MonoBehaviour
 
     void sprinting()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && sprinttime > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && sprinttime > 0 && canrun == true)
         {
             
             movespeed = sprintspeed;
             sprinttime--;
             
+        }
+        else if (sprinttime == 0 && sprintcooldown == 0 && canrun == true)
+        {
+            sprintcooldown = 500;
+            sprinttime = -5000;
+            canrun = false;
         }
         else
         {
@@ -112,7 +122,16 @@ public class playermovement : MonoBehaviour
             {
                 sprinttime++;
             }
-            
+            if(sprintcooldown > 0)
+            {
+                sprintcooldown--;
+
+            }
+            else if(canrun == false)
+            {
+
+            }
+
         }
     }
 }
