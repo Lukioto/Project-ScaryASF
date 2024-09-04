@@ -11,10 +11,12 @@ public class playermovement : MonoBehaviour
     public float pitchRange = 60.0f;
 
     public float sprintspeed = 10f;
-    public float sprinttime = 900f;
+    public float sprintmaxtime = 3000f;
     public float sprintcooldown;
+    
 
     private bool canrun = true;
+    private float sprinttime = 900f;
 
     private float forwardinput;
     private float strafeinput;
@@ -117,7 +119,7 @@ public class playermovement : MonoBehaviour
         else
         {
             movespeed = walkspeed;
-            if (sprinttime < 1000)
+            if (sprinttime < sprintmaxtime)
             {
                 sprinttime++;
             }
