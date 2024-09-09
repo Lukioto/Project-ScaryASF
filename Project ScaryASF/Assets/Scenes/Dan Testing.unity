@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec16083297f4a844a69cdf7b7d9c88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
+  bar: {fileID: 719464541}
   health: {fileID: 0}
 --- !u!4 &2140149170
 Transform:
