@@ -12,6 +12,7 @@ public class gamemanager : MonoBehaviour
     public Image bar;
     public Image health;
 
+    public TextMeshProUGUI titletext;
     public GameObject player;
 
     public GameObject[] victorycontions;
@@ -103,6 +104,7 @@ public class gamemanager : MonoBehaviour
     }
     public void OnNewGame()
     {
+        titletext.text = "";
         m_GameState = Gamestate.Playing;
 
         for (int i = 0; i < victorycontions.Length; i++)
