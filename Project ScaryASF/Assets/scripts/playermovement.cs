@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -13,6 +14,7 @@ public class playermovement : MonoBehaviour
     public float sprintspeed = 10f;
     public float sprintmaxtime = 3000f;
     public float sprintcooldown;
+    public stanamabar sprintbar;
 
     static public bool haslight = false;
     public bool lighton = false;
@@ -42,6 +44,8 @@ public class playermovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         walkspeed = movespeed;
         flashlight = GetComponentInChildren<Light>();
+
+        sprintbar.setMax(sprintmaxtime);
     }
 
     // Update is called once per frame
@@ -107,7 +111,7 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    void sprinting()
+    /*async */void sprinting()
     {
         if (Input.GetKey(KeyCode.LeftShift) && sprinttime > 0 && canrun == true)
         {
@@ -118,7 +122,9 @@ public class playermovement : MonoBehaviour
         }
         else if (sprinttime == 0 && sprintcooldown == 0 && canrun == true)
         {
-            sprintcooldown = 500;
+
+            //sprintcooldown = 500;
+            //await sprintwaiting(5000);
             canrun = false;
         }
         else
@@ -139,6 +145,8 @@ public class playermovement : MonoBehaviour
             }
 
         }
+
+        sprintbar.setstanama(sprinttime);
     }
     void lightfunc()
     {
@@ -164,4 +172,9 @@ public class playermovement : MonoBehaviour
             flashlight.enabled = true;
         }
     }
+
+    /*private static async Task sprintwaiting(int milliseconds)
+    {
+        await Task.Run(() => Thread.Sleep(milliseconds));
+    }*/
 }

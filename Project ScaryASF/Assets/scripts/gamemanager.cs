@@ -64,6 +64,7 @@ public class gamemanager : MonoBehaviour
 
     void GameStateStart()
     {
+        titletext.text = "press enter to start";
         if (Input.GetKeyUp(KeyCode.Return) == true)
         {
             OnNewGame();
@@ -84,7 +85,7 @@ public class gamemanager : MonoBehaviour
 
         if (victory() == true)
         {
-            Debug.Log("victory");
+            titletext.text = "victory";
             isGameOver = true;
         }
 

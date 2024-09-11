@@ -33,4 +33,12 @@ public class flashlight : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            in_area = false;
+        }
+    }
 }
