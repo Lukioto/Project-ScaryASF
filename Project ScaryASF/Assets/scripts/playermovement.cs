@@ -13,6 +13,7 @@ public class playermovement : MonoBehaviour
     public float sprintspeed = 10f;
     public float sprintmaxtime = 3000f;
     public float sprintcooldown;
+    public stanamabar sprintbar;
 
     static public bool haslight = false;
     public bool lighton = false;
@@ -42,6 +43,8 @@ public class playermovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         walkspeed = movespeed;
         flashlight = GetComponentInChildren<Light>();
+
+        sprintbar.setMax(sprintmaxtime);
     }
 
     // Update is called once per frame
@@ -139,6 +142,8 @@ public class playermovement : MonoBehaviour
             }
 
         }
+
+        sprintbar.setstanama(sprinttime);
     }
     void lightfunc()
     {
