@@ -125,7 +125,7 @@ public class playermovement : MonoBehaviour
         {
 
             //sprintcooldown = 500;
-            await CustomWaitAsync(5000);
+            await sprintwaiting(5000);
             canrun = false;
         }
         else
@@ -174,7 +174,7 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    private static async Task CustomWaitAsync(int milliseconds)
+    private static async Task sprintwaiting(int milliseconds)
     {
         await Task.Run(() => Thread.Sleep(milliseconds));
     }
