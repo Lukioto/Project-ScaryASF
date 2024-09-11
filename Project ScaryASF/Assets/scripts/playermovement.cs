@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -110,7 +112,7 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    void sprinting()
+    async void sprinting()
     {
         if (Input.GetKey(KeyCode.LeftShift) && sprinttime > 0 && canrun == true)
         {
@@ -119,9 +121,11 @@ public class playermovement : MonoBehaviour
             sprinttime--;
             
         }
-        else if (sprinttime == 0 && sprintcooldown == 0 && canrun == true)
+        else if (sprinttime == 0 && /*sprintcooldown == 0 && */canrun == true)
         {
-            sprintcooldown = 500;
+
+            //sprintcooldown = 500;
+            await CustomWaitAsync(5000);
             canrun = false;
         }
         else
@@ -131,12 +135,12 @@ public class playermovement : MonoBehaviour
             {
                 sprinttime++;
             }
-            if(sprintcooldown > 0)
+            /*if(sprintcooldown > 0)
             {
                 sprintcooldown--;
 
-            }
-            else if(canrun == false && sprintcooldown == 0)
+            }*/
+            /*else */if(canrun == false && sprintcooldown == 0)
             {
                 canrun = true;
             }
@@ -168,5 +172,10 @@ public class playermovement : MonoBehaviour
         {
             flashlight.enabled = true;
         }
+    }
+
+    private static async Task CustomWaitAsync(int milliseconds)
+    {
+        await Task.Run(() => Thread.Sleep(milliseconds));
     }
 }
