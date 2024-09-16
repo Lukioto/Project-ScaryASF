@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+public class OpenFinalDoorLeft : MonoBehaviour
 {
     public GameObject Door;
     public Animator animator;
@@ -28,9 +27,9 @@ public class OpenDoor : MonoBehaviour
     }
     private void Update()
     {
-        animator.SetBool("DoorOpen", doorOpen);
-        animator.SetBool("InRange", inRange);
-        animator.SetBool("PlayerInput", playerInput);
+        animator.SetBool("FinalDoorOpen", doorOpen);
+        animator.SetBool("FinalInRange", inRange);
+        animator.SetBool("FinalPlayerInput", playerInput);
 
         if (Input.GetKeyDown("e") && inRange == true)
         {
@@ -46,3 +45,4 @@ public class OpenDoor : MonoBehaviour
         }
     }
 }
+
