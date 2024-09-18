@@ -45,7 +45,7 @@ public class playermovement : MonoBehaviour
         walkspeed = movespeed;
         flashlight = GetComponentInChildren<Light>();
 
-        sprintbar.setMax(sprintmaxtime);
+        //sprintbar.setMax(sprintmaxtime);
     }
 
     // Update is called once per frame
@@ -146,7 +146,7 @@ public class playermovement : MonoBehaviour
 
         }
 
-        sprintbar.setstanama(sprinttime);
+        //sprintbar.setstanama(sprinttime);
     }
     void lightfunc()
     {
