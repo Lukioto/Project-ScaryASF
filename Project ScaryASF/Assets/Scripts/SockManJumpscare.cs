@@ -8,6 +8,10 @@ public class SockManJumpscare : MonoBehaviour
     public Image image;
     public AudioSource audioSource;
 
+    private void Awake()
+    {
+        image.enabled = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
         StartCoroutine(SM_Jumpscare());
