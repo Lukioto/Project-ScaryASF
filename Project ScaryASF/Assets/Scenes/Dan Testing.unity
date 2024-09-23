@@ -2938,6 +2938,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1729134021}
     m_Modifications:
+    - target: {fileID: 2102834037, guid: 4e348bde5089256409f6e5a62a041e5e, type: 3}
+      propertyPath: Camra
+      value: 
+      objectReference: {fileID: 2102635607}
     - target: {fileID: 6874665967164878648, guid: 4e348bde5089256409f6e5a62a041e5e, type: 3}
       propertyPath: m_Name
       value: Sock Man
@@ -8176,6 +8180,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!20 &2102635607 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1175174247104797818, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
+  m_PrefabInstance: {fileID: 1175174246655189660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2102834040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6874665967164878652, guid: 4e348bde5089256409f6e5a62a041e5e, type: 3}
