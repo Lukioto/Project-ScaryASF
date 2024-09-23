@@ -21,7 +21,7 @@ public class playermovement : MonoBehaviour
     private Light flashlight;
 
     private bool canrun = true;
-    private float sprinttime = 900f;
+    private float sprinttime = 3000f;
 
     private float forwardinput;
     private float strafeinput;
