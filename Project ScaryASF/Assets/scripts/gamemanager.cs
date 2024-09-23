@@ -16,6 +16,7 @@ public class gamemanager : MonoBehaviour
     public GameObject player;
 
     public GameObject[] victorycontions;
+    public bool ableToWin;
 
     public GameObject falsecamra;
 
@@ -38,6 +39,7 @@ public class gamemanager : MonoBehaviour
     void Start()
     {
         player.SetActive(false);
+        ableToWin = false;
     }
 
     // Update is called once per frame
@@ -85,7 +87,7 @@ public class gamemanager : MonoBehaviour
 
         if (victory() == true)
         {
-            titletext.text = "victory";
+            ableToWin = true;
             isGameOver = true;
         }
 

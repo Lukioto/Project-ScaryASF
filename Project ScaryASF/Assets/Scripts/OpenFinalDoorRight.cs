@@ -6,6 +6,7 @@ public class OpenFinalDoorRight : MonoBehaviour
 {
     public GameObject Door;
     public Animator animator;
+    public gamemanager gamemanager;
 
     private bool inRange;
     private bool doorOpen;
@@ -31,7 +32,7 @@ public class OpenFinalDoorRight : MonoBehaviour
         animator.SetBool("FinalInRange", inRange);
         animator.SetBool("FinalPlayerInput", playerInput);
 
-        if (Input.GetKeyDown("e") && inRange == true)
+        if (Input.GetKeyDown("e") && inRange == true && gamemanager.ableToWin == true)
         {
             playerInput = true;
             if (doorOpen == false)

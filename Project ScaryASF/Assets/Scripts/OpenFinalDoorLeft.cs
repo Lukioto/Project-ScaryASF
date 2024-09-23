@@ -6,6 +6,7 @@ public class OpenFinalDoorLeft : MonoBehaviour
 {
     public GameObject Door;
     public Animator animator;
+    public gamemanager gamemanager;
 
     private bool inRange;
     private bool doorOpen;
