@@ -5582,7 +5582,7 @@ MonoBehaviour:
   Door: {fileID: 1329042442}
   animator: {fileID: 1329042444}
   gamemanager: {fileID: 500942678}
-  cantWinYetText: {fileID: 0}
+  cantWinYetText: {fileID: 158460018}
 --- !u!65 &1329042449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8034,7 +8034,7 @@ MonoBehaviour:
   Door: {fileID: 2138145722}
   animator: {fileID: 2138145727}
   gamemanager: {fileID: 500942678}
-  cantWinYetText: {fileID: 0}
+  cantWinYetText: {fileID: 158460018}
 --- !u!65 &2138145729
 BoxCollider:
   m_ObjectHideFlags: 0

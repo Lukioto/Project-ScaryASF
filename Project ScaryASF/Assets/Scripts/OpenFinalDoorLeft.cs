@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class OpenFinalDoorLeft : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class OpenFinalDoorLeft : MonoBehaviour
     private bool doorOpen;
     private bool playerInput;
 
+    private void Awake()
+    {
+        cantWinYetText.text = "";
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -42,14 +47,10 @@ public class OpenFinalDoorLeft : MonoBehaviour
             {
                 doorOpen = true;
             }
-            else if (doorOpen == true)
+            else
             {
-                doorOpen = false;
+                cantWinYetText.text = "Collect all objectives to open";
             }
-        }
-        else
-        {
-
         }
     }
 }
