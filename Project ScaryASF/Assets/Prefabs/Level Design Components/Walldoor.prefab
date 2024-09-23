@@ -365,11 +365,43 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4585483044365025087}
     m_Modifications:
+    - target: {fileID: 3054401997244238192, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3307860166187671936, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
       propertyPath: m_Name
       value: Common Door
       objectReference: {fileID: 0}
     - target: {fileID: 3307860166187671936, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979267224785199184, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887244779704063324, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290068095971883520, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694944955805240602, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6066737152874578621, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118118502271666520, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281632991506994233, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -416,6 +448,10 @@ PrefabInstance:
     - target: {fileID: 7509910288878827318, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090454363315524449, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a8791a64d16ff4f96f892ee114e61e, type: 3}

@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b08e24f45bc87e840b347d18687ea4b0, type: 2}
 --- !u!1 &55939164
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   bar: {fileID: 0}
   health: {fileID: 0}
   titletext: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 835746700}
   victorycontions: []
   ableToWin: 0
   falsecamra: {fileID: 0}
@@ -4370,6 +4370,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816217327}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &835746700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
+  m_PrefabInstance: {fileID: 1474782894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &859762051
 GameObject:
   m_ObjectHideFlags: 0
