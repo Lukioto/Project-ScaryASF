@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class OpenFinalDoorRight : MonoBehaviour
@@ -7,6 +9,7 @@ public class OpenFinalDoorRight : MonoBehaviour
     public GameObject Door;
     public Animator animator;
     public gamemanager gamemanager;
+    public TextMeshProUGUI cantWinYetText;
 
     private bool inRange;
     private bool doorOpen;
