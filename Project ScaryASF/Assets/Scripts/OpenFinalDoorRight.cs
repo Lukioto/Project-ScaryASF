@@ -15,6 +15,10 @@ public class OpenFinalDoorRight : MonoBehaviour
     private bool doorOpen;
     private bool playerInput;
 
+    private void Awake()
+    {
+        cantWinYetText.text = "";
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -35,16 +39,18 @@ public class OpenFinalDoorRight : MonoBehaviour
         animator.SetBool("FinalInRange", inRange);
         animator.SetBool("FinalPlayerInput", playerInput);
 
-        if (Input.GetKeyDown("e") && inRange == true && gamemanager.ableToWin == true)
+        if (Input.GetKeyDown("e") && inRange == true)
         {
             playerInput = true;
-            if (doorOpen == false)
+            if (doorOpen == false && gamemanager.ableToWin == true)
             {
                 doorOpen = true;
             }
-            else if (doorOpen == true)
+            else if (doorOpen = false && gamemanager.ableToWin == false)
             {
-                doorOpen = false;
+                cantWinYetText.text = "Collect all objectives to open";
+                new WaitForSeconds(1f);
+                cantWinYetText.text = "";
             }
         }
     }

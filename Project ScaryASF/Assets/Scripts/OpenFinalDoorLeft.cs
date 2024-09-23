@@ -40,16 +40,18 @@ public class OpenFinalDoorLeft : MonoBehaviour
         animator.SetBool("FinalInRange", inRange);
         animator.SetBool("FinalPlayerInput", playerInput);
 
-        if (Input.GetKeyDown("e") && inRange == true && gamemanager.ableToWin == true)
+        if (Input.GetKeyDown("e") && inRange == true)
         {
             playerInput = true;
-            if (doorOpen == false)
+            if (doorOpen == false && gamemanager.ableToWin == true)
             {
                 doorOpen = true;
             }
-            else
+            else if (doorOpen = false && gamemanager.ableToWin == false)
             {
                 cantWinYetText.text = "Collect all objectives to open";
+                new WaitForSeconds(1f);
+                cantWinYetText.text = "";
             }
         }
     }
