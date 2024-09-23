@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class OpenFinalDoorLeft : MonoBehaviour
@@ -7,6 +9,7 @@ public class OpenFinalDoorLeft : MonoBehaviour
     public GameObject Door;
     public Animator animator;
     public gamemanager gamemanager;
+    public TextMeshProUGUI cantWinYetText;
 
     private bool inRange;
     private bool doorOpen;
@@ -32,7 +35,7 @@ public class OpenFinalDoorLeft : MonoBehaviour
         animator.SetBool("FinalInRange", inRange);
         animator.SetBool("FinalPlayerInput", playerInput);
 
-        if (Input.GetKeyDown("e") && inRange == true)
+        if (Input.GetKeyDown("e") && inRange == true && gamemanager.ableToWin == true)
         {
             playerInput = true;
             if (doorOpen == false)
@@ -43,6 +46,10 @@ public class OpenFinalDoorLeft : MonoBehaviour
             {
                 doorOpen = false;
             }
+        }
+        else
+        {
+
         }
     }
 }
