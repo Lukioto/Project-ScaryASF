@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class gamemanager : MonoBehaviour
@@ -66,7 +65,7 @@ public class gamemanager : MonoBehaviour
 
     void GameStateStart()
     {
-        titletext.text = "press enter to start";
+        titletext.text = "Press enter to start";
         if (Input.GetKeyUp(KeyCode.Return) == true)
         {
             OnNewGame();
