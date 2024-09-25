@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class actualfoesmove : MonoBehaviour
 {
-    public float m_CloseDistance = 8f;
 
     private GameObject m_player;
     private NavMeshAgent m_NavAgent;
