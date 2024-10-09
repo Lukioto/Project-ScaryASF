@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class victoyobject : MonoBehaviour
 {
-
+    public gamemanager gamemanager;
     private bool in_area = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E) && in_area == true)
-
+        if (Input.GetKeyDown(KeyCode.E) && in_area == true)
         {
+            gamemanager.objectivesCollected++;
             gameObject.SetActive(false);
-
         }
     }
 
