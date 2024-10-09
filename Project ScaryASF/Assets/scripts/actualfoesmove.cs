@@ -23,10 +23,45 @@ public class actualfoesmove : MonoBehaviour
         m_Follow = false;
     }
 
+    void Update()
+    {
+        newpatrolpoint();
+
+        place = GameObject.FindGameObjectWithTag("patrol");
+
+        if (m_Follow == false)
+        {
+            m_NavAgent.SetDestination(place.transform.position);
+            m_NavAgent.isStopped = false;
+            return;
+
+            /*if (transform.position != place)
+            {
+                m_NavAgent.SetDestination(place);
+                m_NavAgent.isStopped = false;
+                return;
+            }
+            else
+            {
+                return;
+            }
+            */
+        }
+        
+
+        float distance = (m_player.transform.position - transform.position).magnitude;
+
+
+        m_NavAgent.SetDestination(m_player.transform.position);
+        m_NavAgent.isStopped = false;
+
+
+    }
+
     private void OnEnable()
     {
         //m_Rigidbody.isKinematic = false;
-        transform.position = place.transform.position;
+        transform.position = transform.position;
     }
 
     private void OnDisable()
@@ -54,38 +89,17 @@ public class actualfoesmove : MonoBehaviour
 
     public void newpatrolpoint()
     {
+        if (activepoint >= 2)
+        {
+            activepoint = 0;
+        }
+        else
+        {
+            activepoint++;
+        }
+
         points[activepoint].SetActive(true);
     }
 
-    void Update()
-    {
-
-        place = GameObject.FindGameObjectWithTag("victory");
-
-        if (m_Follow == false)
-        {
-            m_NavAgent.SetDestination(place.transform.position);
-
-            /*if (transform.position != place)
-            {
-                m_NavAgent.SetDestination(place);
-                m_NavAgent.isStopped = false;
-                return;
-            }
-            else
-            {
-                return;
-            }
-            */
-        }
-
-
-        float distance = (m_player.transform.position - transform.position).magnitude;
-
-        
-          m_NavAgent.SetDestination(m_player.transform.position);
-          m_NavAgent.isStopped = false;
-        
-
-    }
+   
 }
