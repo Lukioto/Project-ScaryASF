@@ -2315,12 +2315,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 1295058955}
   health: {fileID: 1035391450}
-  titletext: {fileID: 1932761865}
+  titleText: {fileID: 1932761865}
+  objectiveCounter: {fileID: 1145668264}
   player: {fileID: 1521745723}
   victorycontions:
   - {fileID: 1027246274}
   ableToWin: 0
   falsecamra: {fileID: 849823027}
+  objectivesCollected: 0
 --- !u!4 &478305470
 Transform:
   m_ObjectHideFlags: 0
@@ -7974,7 +7976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2003430439
 RectTransform:
   m_ObjectHideFlags: 0

@@ -11,13 +11,16 @@ public class gamemanager : MonoBehaviour
     public Image bar;
     public Image health;
 
-    public TextMeshProUGUI titletext;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI objectiveCounter;
     public GameObject player;
 
     public GameObject[] victorycontions;
     public bool ableToWin;
 
     public GameObject falsecamra;
+
+    public int objectivesCollected = 0;
 
     public enum Gamestate
     {
@@ -32,6 +35,7 @@ public class gamemanager : MonoBehaviour
 
     private void Awake()
     {
+        objectiveCounter.text = " ";
         m_GameState = Gamestate.Start;
     }
 
@@ -65,7 +69,7 @@ public class gamemanager : MonoBehaviour
 
     void GameStateStart()
     {
-        titletext.text = "Press enter to start";
+        titleText.text = "Press enter to start";
         if (Input.GetKeyUp(KeyCode.Return) == true)
         {
             OnNewGame();
@@ -83,6 +87,8 @@ public class gamemanager : MonoBehaviour
     void GameStatePlaying()
     {
         bool isGameOver = false;
+
+        objectiveCounter.text = objectivesCollected + "/5 Burritos";
 
         if (victory() == true)
         {
@@ -106,7 +112,7 @@ public class gamemanager : MonoBehaviour
     }
     public void OnNewGame()
     {
-        titletext.text = "";
+        titleText.text = "";
         m_GameState = Gamestate.Playing;
 
         playermovement.haslight = false;
