@@ -109,6 +109,8 @@ public class gamemanager : MonoBehaviour
         titletext.text = "";
         m_GameState = Gamestate.Playing;
 
+        playermovement.haslight = false;
+
         for (int i = 0; i < victorycontions.Length; i++)
         {
             victorycontions[i].SetActive(true);
