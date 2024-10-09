@@ -5,13 +5,15 @@ using UnityEngine.AI;
 
 public class actualfoesmove : MonoBehaviour
 {
+    private int activepoint;
+    public GameObject[] points;
 
     private GameObject m_player;
     private NavMeshAgent m_NavAgent;
     // private Rigidbody m_Rigidbody;
 
     private bool m_Follow;
-    private Vector3 place;
+    private GameObject place;
 
     void Awake()
     {
@@ -19,13 +21,12 @@ public class actualfoesmove : MonoBehaviour
         m_NavAgent = GetComponent<NavMeshAgent>();
         //m_Rigidbody = GetComponent<Rigidbody>();
         m_Follow = false;
-        place = transform.position;
     }
 
     private void OnEnable()
     {
         //m_Rigidbody.isKinematic = false;
-        transform.position = place;
+        transform.position = place.transform.position;
     }
 
     private void OnDisable()
@@ -51,12 +52,21 @@ public class actualfoesmove : MonoBehaviour
         }
     }
 
+    public void newpatrolpoint()
+    {
+        points[activepoint].SetActive(true);
+    }
+
     void Update()
     {
+
+        place = GameObject.FindGameObjectWithTag("victory");
+
         if (m_Follow == false)
         {
+            m_NavAgent.SetDestination(place.transform.position);
 
-            if (transform.position != place)
+            /*if (transform.position != place)
             {
                 m_NavAgent.SetDestination(place);
                 m_NavAgent.isStopped = false;
@@ -66,7 +76,7 @@ public class actualfoesmove : MonoBehaviour
             {
                 return;
             }
-
+            */
         }
 
 
