@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class gamemanager : MonoBehaviour
 {
@@ -139,5 +140,15 @@ public class gamemanager : MonoBehaviour
         }
         return objecteves == 0;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player" && ableToWin == true)
+        {
+            Debug.Log("player has won the game");
+        }
+    }
+
+    
 
 }

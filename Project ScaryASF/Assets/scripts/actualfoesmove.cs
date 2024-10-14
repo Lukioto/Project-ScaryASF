@@ -98,7 +98,7 @@ public class actualfoesmove : MonoBehaviour
             activepoint++;
         }
 
-        points[activepoint].SetActive(true);
+        //points[activepoint].SetActive(true);
     }
 
    
