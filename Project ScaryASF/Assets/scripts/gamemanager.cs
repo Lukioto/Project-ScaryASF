@@ -89,7 +89,7 @@ public class gamemanager : MonoBehaviour
     {
         bool isGameOver = false;
 
-        objectiveCounter.text = objectivesCollected + "/5 Burritos";
+        objectiveCounter.text = objectivesCollected + "/5 Tacos";
 
         if (victory() == true)
         {
@@ -140,15 +140,4 @@ public class gamemanager : MonoBehaviour
         }
         return objecteves == 0;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player" && ableToWin == true)
-        {
-            Debug.Log("player has won the game");
-        }
-    }
-
-    
-
 }
