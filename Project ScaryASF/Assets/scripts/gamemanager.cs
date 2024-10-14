@@ -23,6 +23,8 @@ public class gamemanager : MonoBehaviour
 
     public int objectivesCollected = 0;
 
+    public GameObject sockman;
+
     public enum Gamestate
     {
         Start,
@@ -70,6 +72,7 @@ public class gamemanager : MonoBehaviour
 
     void GameStateStart()
     {
+        sockman.SetActive(false);
         titleText.text = "Press enter to start";
         if (Input.GetKeyUp(KeyCode.Return) == true)
         {
@@ -88,6 +91,7 @@ public class gamemanager : MonoBehaviour
     void GameStatePlaying()
     {
         bool isGameOver = false;
+        sockman.SetActive(true);
 
         objectiveCounter.text = objectivesCollected + "/5 Tacos";
 
