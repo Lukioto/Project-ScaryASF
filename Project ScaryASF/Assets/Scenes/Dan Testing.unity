@@ -2920,6 +2920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+--- !u!1 &586925641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8829747830839259669, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+  m_PrefabInstance: {fileID: 586925640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &604511914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5372,6 +5377,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+--- !u!1 &1170625098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8829747830839259669, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+  m_PrefabInstance: {fileID: 1170625097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1219598809
 GameObject:
   m_ObjectHideFlags: 0
@@ -9219,6 +9229,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+--- !u!1 &1829436280438907383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8829747830839259669, guid: 797d7600101f37c4f93c8b36186b802f, type: 3}
+  m_PrefabInstance: {fileID: 1829436280438907382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2910093733764599462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9285,15 +9300,27 @@ PrefabInstance:
     - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: points.Array.data[0]
       value: 
-      objectReference: {fileID: 231471796}
+      objectReference: {fileID: 1829436280438907383}
     - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: points.Array.data[1]
       value: 
-      objectReference: {fileID: 1904130899}
+      objectReference: {fileID: 586925641}
     - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: points.Array.data[2]
       value: 
-      objectReference: {fileID: 115205595}
+      objectReference: {fileID: 1170625098}
+    - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: points.Array.data[3]
+      value: 
+      objectReference: {fileID: 1829436280438907383}
+    - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: points.Array.data[4]
+      value: 
+      objectReference: {fileID: 586925641}
+    - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: points.Array.data[5]
+      value: 
+      objectReference: {fileID: 1170625098}
     - target: {fileID: 2910093735299112175, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: Camra
       value: 
