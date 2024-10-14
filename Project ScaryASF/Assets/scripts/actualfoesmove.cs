@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class actualfoesmove : MonoBehaviour
 {
-    private int activepoint;
-    public GameObject[] points;
+    public Transform[] points;
+    private int destPoint = 0;
 
     private GameObject m_player;
     private NavMeshAgent m_NavAgent;
@@ -15,25 +15,43 @@ public class actualfoesmove : MonoBehaviour
     private bool m_Follow;
     private GameObject place;
 
+    private Vector3 target;
+
     void Awake()
     {
         m_player = GameObject.FindGameObjectWithTag("Player");
         m_NavAgent = GetComponent<NavMeshAgent>();
         //m_Rigidbody = GetComponent<Rigidbody>();
         m_Follow = false;
+        GotoNextPoint();
+
+        m_NavAgent.autoBraking = false;
     }
 
     void Update()
     {
-        newpatrolpoint();
 
-        place = GameObject.FindGameObjectWithTag("patrol");
+
 
         if (m_Follow == false)
         {
+            if (Vector3.Distance(transform.position, target) < 1)
+            {
+                potralpoint();
+                GotoNextPoint();
+
+            }
+
+            if (!m_NavAgent.pathPending && !m_NavAgent.hasPath && m_NavAgent.remainingDistance < 0.1f)
+            {
+                potralpoint();
+                GotoNextPoint();
+            }
+
+            /*
             m_NavAgent.SetDestination(place.transform.position);
             m_NavAgent.isStopped = false;
-            return;
+            return;*/
 
             /*if (transform.position != place)
             {
@@ -47,12 +65,15 @@ public class actualfoesmove : MonoBehaviour
             }
             */
         }
-        
+        else
+        {
 
-        float distance = (m_player.transform.position - transform.position).magnitude;
+            float distance = (m_player.transform.position - transform.position).magnitude;
 
 
-        m_NavAgent.SetDestination(m_player.transform.position);
+            m_NavAgent.SetDestination(m_player.transform.position);
+        }
+
         m_NavAgent.isStopped = false;
 
 
@@ -86,20 +107,31 @@ public class actualfoesmove : MonoBehaviour
             m_Follow = false;
         }
     }
-
-    public void newpatrolpoint()
+    void GotoNextPoint()
     {
-        if (activepoint >= 2)
-        {
-            activepoint = 0;
-        }
-        else
-        {
-            activepoint++;
-        }
+        // Returns if no points have been set up
+        if (points.Length == 0)
+            return;
 
+<<<<<<< Updated upstream
         //points[activepoint].SetActive(true);
+=======
+        // Set the agent to go to the currently selected destination.
+        m_NavAgent.destination = points[destPoint].position;
+
+        // Choose the next point in the array as the destination,
+        // cycling to the start if necessary.
+        destPoint = (destPoint + 1) % points.Length;
     }
 
-   
+    private void potralpoint()
+    {
+        destPoint++;
+        if (destPoint == points.Length)
+        {
+            destPoint = 0;
+        }
+>>>>>>> Stashed changes
+    }
+
 }
