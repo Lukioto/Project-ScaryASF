@@ -9,7 +9,7 @@ public class actualfoesmove : MonoBehaviour
     private int destPoint = 0;
 
     private GameObject m_player;
-    private NavMeshAgent m_NavAgent;
+    public NavMeshAgent m_NavAgent;
     // private Rigidbody m_Rigidbody;
 
     private bool m_Follow;

@@ -8,6 +8,7 @@ public class SockManJumpscare : MonoBehaviour
 {
     public Image image;
     public AudioSource audioSource;
+    public actualfoesmove movement;
 
     private void Awake()
     {
