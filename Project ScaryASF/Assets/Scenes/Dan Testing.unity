@@ -6489,6 +6489,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403527993}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1404065436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2910093734419985250, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+  m_PrefabInstance: {fileID: 2910093733764599462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1471950852
 GameObject:
   m_ObjectHideFlags: 0
@@ -8902,7 +8907,7 @@ MonoBehaviour:
   ableToWin: 0
   falsecamra: {fileID: 1979473315}
   objectivesCollected: 0
-  sockman: {fileID: 0}
+  sockman: {fileID: 1404065436}
 --- !u!4 &2140149170
 Transform:
   m_ObjectHideFlags: 0
@@ -9167,6 +9172,10 @@ PrefabInstance:
       propertyPath: sprintbar
       value: 
       objectReference: {fileID: 1751434745}
+    - target: {fileID: 1175174245751746234, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
+      propertyPath: sprintspeed
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
       propertyPath: m_Name
       value: player
@@ -9242,6 +9251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2910093734419985249, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: m_Radius
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2910093734419985250, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: m_Name
       value: sock Man prfab
