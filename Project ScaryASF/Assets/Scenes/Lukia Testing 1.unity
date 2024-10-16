@@ -1456,6 +1456,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2910093734419985248, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: avoidancePriority
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910093734419985249, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: m_Radius
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 2910093734419985250, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: m_Name
       value: sock Man prfab
@@ -2487,6 +2495,7 @@ MonoBehaviour:
   ableToWin: 0
   falsecamra: {fileID: 849823027}
   objectivesCollected: 0
+  sockman: {fileID: 326025335}
 --- !u!4 &478305470
 Transform:
   m_ObjectHideFlags: 0
@@ -6308,6 +6317,10 @@ PrefabInstance:
       propertyPath: sprintbar
       value: 
       objectReference: {fileID: 418228129}
+    - target: {fileID: 1175174245751746234, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
+      propertyPath: sprintspeed
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
       propertyPath: m_Name
       value: player
