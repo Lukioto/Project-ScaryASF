@@ -23,7 +23,7 @@ public class actualfoesmove : MonoBehaviour
         m_NavAgent = GetComponent<NavMeshAgent>();
         //m_Rigidbody = GetComponent<Rigidbody>();
         m_Follow = false;
-        GotoNextPoint();
+        NextPoint();
 
         m_NavAgent.autoBraking = false;
     }
@@ -38,14 +38,14 @@ public class actualfoesmove : MonoBehaviour
             if (Vector3.Distance(transform.position, target) < 1)
             {
                 potralpoint();
-                GotoNextPoint();
+                NextPoint();
 
             }
 
             if (!m_NavAgent.pathPending && !m_NavAgent.hasPath && m_NavAgent.remainingDistance < 0.1f)
             {
                 potralpoint();
-                GotoNextPoint();
+                NextPoint();
             }
 
             /*
@@ -107,7 +107,7 @@ public class actualfoesmove : MonoBehaviour
             m_Follow = false;
         }
     }
-    void GotoNextPoint()
+    void NextPoint()
     {
         if (points.Length == 0)
             return;
