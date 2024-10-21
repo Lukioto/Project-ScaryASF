@@ -25,7 +25,6 @@ public class SockManJumpscare : MonoBehaviour
         if (audioSource != null)
         {
             audioSource.Play();
-
         }
         yield return new WaitForSeconds(1f);
         image.enabled = false;

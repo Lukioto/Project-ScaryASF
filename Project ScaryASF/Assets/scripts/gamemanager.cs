@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using JetBrains.Annotations;
 
 public class gamemanager : MonoBehaviour
 {
@@ -77,14 +78,6 @@ public class gamemanager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Return) == true)
         {
             OnNewGame();
-            /*
-            m_GameState = Gamestate.Playing;
-
-            for (int i = 0; i < victorycontions.Length; i++)
-            {
-                victorycontions[i].SetActive(true);
-            }
-            */
         }
     }
 
