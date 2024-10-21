@@ -164,13 +164,13 @@ public class playermovement : MonoBehaviour
             flashlight.enabled = false;
 
         }
-        if (Input.GetButtonDown("Fire1") && haslight == true && lighton == false)
+        if (Input.GetKeyDown(KeyCode.F) && haslight == true && lighton == false)
         {
             lighton = true;
             Debug.Log("lights on");
         }
 
-        else if (Input.GetButtonDown("Fire1") && lighton == true)
+        else if (Input.GetKeyDown(KeyCode.F) && lighton == true)
         {
             lighton = false;
 
