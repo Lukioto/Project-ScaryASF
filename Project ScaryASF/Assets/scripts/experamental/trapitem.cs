@@ -31,7 +31,7 @@ public class trapitem : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, sock.transform.position) < 1)
+        if (Vector3.Distance(transform.position, sock.transform.position) < 20)
         {
 
 
