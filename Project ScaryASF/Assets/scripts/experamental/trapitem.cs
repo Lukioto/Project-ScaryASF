@@ -1,54 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class trapitem : MonoBehaviour
 {
-    actualfoesmove move;
-    GameObject sock;
 
-    bool countdown = false;
-    int timer = 10000;
+    private bool in_area = false;
+    public playermovement move;
 
-
-    /*private void OnTriggerEnter(Collider other)
+    // Start is called before the first frame update
+    void Start()
     {
-        if (other.tag == "sock")
-        {
-            Debug.Log("check");
-            move.m_NavAgent.speed = 0;
-            countdown = true;
 
-
-        }
-    }*/
-
-    private void Awake()
-    {
-        sock = GameObject.FindGameObjectWithTag("sock");
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (Vector3.Distance(transform.position, sock.transform.position) < 20)
+        if (Input.GetKeyUp(KeyCode.E) && in_area == true)
+
         {
+            move.hasneedle = true;
+            gameObject.SetActive(false);
 
+        }
+    }
 
-            if (countdown == true)
-            {
-                if (timer == 0)
-                {
-                    countdown = false;
-                    timer = 10000;
-                }
-                else
-                {
-                    timer -= 1;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            in_area = true;
 
-                }
+        }
 
-            }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            in_area = false;
         }
     }
 }
