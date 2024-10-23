@@ -20,6 +20,8 @@ public class playermovement : MonoBehaviour
     public bool lighton = false;
     private Light flashlight;
 
+    public bool hasneedle = false;
+
     private bool canrun = true;
     private float sprinttime = 3000f;
 
@@ -59,6 +61,7 @@ public class playermovement : MonoBehaviour
         CameraMovement();
         JumpNGrav();
         lightfunc();
+        ingectionneedle();
     }
 
     void Movement()
@@ -179,6 +182,15 @@ public class playermovement : MonoBehaviour
         if (haslight == true && lighton == true)
         {
             flashlight.enabled = true;
+        }
+    }
+
+    void ingectionneedle()
+    {
+        if (hasneedle == true && Input.GetButtonDown("Fire1"))
+        {
+            sprinttime += 5000;
+            hasneedle = false;
         }
     }
 
