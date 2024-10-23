@@ -115,7 +115,7 @@ public class actualfoesmove : MonoBehaviour
 
         m_NavAgent.destination = points[destPoint].position;
 
-        destPoint = (destPoint + 1) % points.Length;
+        destPoint = (destPoint++) % points.Length;
     }
 
     private void potralpoint()
