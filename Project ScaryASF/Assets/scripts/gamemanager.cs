@@ -13,6 +13,10 @@ public class gamemanager : MonoBehaviour
     public Image bar;
     public Image health;
 
+    public TextMeshProUGUI tacoCraze;
+    private float disappearTime;
+    private bool noTacoCraze = false;
+
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI objectiveCounter;
     public GameObject player;
@@ -41,6 +45,8 @@ public class gamemanager : MonoBehaviour
     {
         objectiveCounter.text = " ";
         m_GameState = Gamestate.Start;
+        tacoCraze.text = "He can smell the tacos";
+        tacoCraze.enabled = false;
     }
 
     void Start()
@@ -92,11 +98,17 @@ public class gamemanager : MonoBehaviour
         {
             ableToWin = true;
             isGameOver = true;
+            EnableText();
         }
 
         if (isGameOver == true)
         {
             m_GameState = Gamestate.GOver;
+        }
+
+        if (tacoCraze.enabled && (Time.time >= disappearTime))
+        {
+            tacoCraze.enabled = false;
         }
     }
 
@@ -136,5 +148,16 @@ public class gamemanager : MonoBehaviour
             }
         }
         return objecteves == 0;
+    }
+
+    public void EnableText()
+    {
+        if (noTacoCraze == false)
+        {
+            tacoCraze.enabled = true;
+            disappearTime = Time.time + 5f;
+            noTacoCraze = true;
+        }
+
     }
 }
