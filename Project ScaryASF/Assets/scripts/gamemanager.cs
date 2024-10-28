@@ -106,8 +106,9 @@ public class gamemanager : MonoBehaviour
             m_GameState = Gamestate.GOver;
         }
 
-        if (tacoCraze.enabled && (Time.time >= disappearTime))
+        if (tacoCraze.enabled == true && (Time.time >= disappearTime))
         {
+            Debug.Log("tacos");
             tacoCraze.enabled = false;
         }
     }
@@ -155,7 +156,7 @@ public class gamemanager : MonoBehaviour
         if (noTacoCraze == false)
         {
             tacoCraze.enabled = true;
-            disappearTime = Time.time + 5f;
+            disappearTime = Time.time + 1f;
             noTacoCraze = true;
         }
 
