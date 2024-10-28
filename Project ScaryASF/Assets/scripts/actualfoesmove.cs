@@ -10,8 +10,8 @@ public class actualfoesmove : MonoBehaviour
 
     private GameObject m_player;
     public NavMeshAgent m_NavAgent;
-    // private Rigidbody m_Rigidbody;
 
+    public bool playerInvisible = false;
     private bool m_Follow;
     private GameObject place;
 
@@ -30,8 +30,10 @@ public class actualfoesmove : MonoBehaviour
 
     void Update()
     {
-
-
+        if (playerInvisible == true)
+        {
+            m_Follow = false;
+        }
 
         if (m_Follow == false)
         {
@@ -48,22 +50,6 @@ public class actualfoesmove : MonoBehaviour
                 NextPoint();
             }
 
-            /*
-            m_NavAgent.SetDestination(place.transform.position);
-            m_NavAgent.isStopped = false;
-            return;*/
-
-            /*if (transform.position != place)
-            {
-                m_NavAgent.SetDestination(place);
-                m_NavAgent.isStopped = false;
-                return;
-            }
-            else
-            {
-                return;
-            }
-            */
         }
         else
         {
@@ -107,6 +93,7 @@ public class actualfoesmove : MonoBehaviour
             m_Follow = false;
         }
     }
+  
     void NextPoint()
     {
         if (points.Length == 0)

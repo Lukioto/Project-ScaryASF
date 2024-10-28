@@ -1598,6 +1598,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.8227215, y: 0.9356766, z: 8.477139}
   m_Center: {x: -0.348028, y: 0.36141586, z: 0.76142436}
+--- !u!114 &326025342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+  m_PrefabInstance: {fileID: 326025334}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326025335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31abf5a203c5244dbba44ff9b5f7a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &341340958
 GameObject:
   m_ObjectHideFlags: 0
@@ -6669,6 +6680,7 @@ GameObject:
   - component: {fileID: 1576114553}
   - component: {fileID: 1576114552}
   - component: {fileID: 1576114551}
+  - component: {fileID: 1576114556}
   m_Layer: 0
   m_Name: InvisaPill
   m_TagString: Untagged
@@ -6782,6 +6794,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576114549}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1576114556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576114549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147fa1b1a94e8a842837cc4962388d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actualFoesMove: {fileID: 326025342}
 --- !u!1 &1576401420
 GameObject:
   m_ObjectHideFlags: 0

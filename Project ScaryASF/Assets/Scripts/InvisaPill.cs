@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class victoyobject : MonoBehaviour
+public class InvisaPill : MonoBehaviour
 {
-    public gamemanager gamemanager;
+    public actualfoesmove actualFoesMove;
     private bool in_area = false;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && in_area == true)
         {
-            gamemanager.objectivesCollected++;
+            actualFoesMove.playerInvisible = true;
             gameObject.SetActive(false);
         }
     }
