@@ -61,8 +61,6 @@ public class actualfoesmove : MonoBehaviour
         }
 
         m_NavAgent.isStopped = false;
-
-
     }
 
     private void OnEnable()
