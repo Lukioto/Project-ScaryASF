@@ -138,11 +138,19 @@ public class playermovement : MonoBehaviour
             sprintcooldown = 500;
         }
 
+        else if (sprinttime <= 10)
+        {
+            sprintcooldown = 500;
+            sprinttime = 11f;
+            canrun = false;
+        }
+
         else
         {
             movespeed = walkspeed;
             if (sprinttime < sprintmaxtime && sprintcooldown == 0)
             {
+                canrun = true;
                 sprinttime++;
             }
 
@@ -191,6 +199,7 @@ public class playermovement : MonoBehaviour
         {
             sprinttime += 5000;
             hasneedle = false;
+            canrun = true;
         }
     }
 
