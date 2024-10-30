@@ -61,7 +61,7 @@ public class playermovement : MonoBehaviour
         CameraMovement();
         JumpNGrav();
         lightfunc();
-        ingectionneedle();
+        
     }
 
     void Movement()
@@ -193,14 +193,21 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    void ingectionneedle()
+    public IEnumerator ingectionneedle()
     {
-        if (hasneedle == true && Input.GetButtonDown("Fire1"))
-        {
-            sprinttime += 5000;
-            hasneedle = false;
-            canrun = true;
-        }
+        Debug.Log("start");
+        sprinttime += 99999;
+        hasneedle = false;
+        canrun = true;
+        yield return new WaitForSeconds(15f);
+        sprinttime = sprintmaxtime;
+        Debug.Log("end");
+
+    }
+
+    public void needle()
+    {
+        StartCoroutine(ingectionneedle());
     }
 
     /*private static async Task sprintwaiting(int milliseconds)
