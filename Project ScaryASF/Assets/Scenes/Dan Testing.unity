@@ -5175,6 +5175,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 2078667747}
+    - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: m_NavAgent
       value: 
       objectReference: {fileID: 1664288577}
