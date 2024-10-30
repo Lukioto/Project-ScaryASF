@@ -20,7 +20,8 @@ public class trapitem : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E) && in_area == true)
 
         {
-            move.hasneedle = true;
+            move.sprinttime += 5000;
+            move.canrun = true;
             gameObject.SetActive(false);
 
         }
