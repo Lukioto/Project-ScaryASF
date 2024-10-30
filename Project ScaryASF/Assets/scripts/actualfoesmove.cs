@@ -17,6 +17,8 @@ public class actualfoesmove : MonoBehaviour
 
     private Vector3 target;
 
+    public gamemanager manager;
+
     void Awake()
     {
         m_player = GameObject.FindGameObjectWithTag("Player");
@@ -33,6 +35,11 @@ public class actualfoesmove : MonoBehaviour
         if (playerInvisible == true)
         {
             StartCoroutine(disableInvis());
+        }
+
+        if (manager.ableToWin == true)
+        {
+            m_Follow = true;
         }
 
         if (m_Follow == false)
