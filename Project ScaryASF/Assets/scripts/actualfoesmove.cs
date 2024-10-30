@@ -32,7 +32,7 @@ public class actualfoesmove : MonoBehaviour
     {
         if (playerInvisible == true)
         {
-            m_Follow = false;
+            StartCoroutine(disableInvis());
         }
 
         if (m_Follow == false)
@@ -63,6 +63,13 @@ public class actualfoesmove : MonoBehaviour
         m_NavAgent.isStopped = false;
     }
 
+    IEnumerator disableInvis()
+    {
+        m_Follow = false;
+        yield return new WaitForSeconds(8);
+        playerInvisible = false;
+    }
+
     private void OnEnable()
     {
         //m_Rigidbody.isKinematic = false;
@@ -75,7 +82,7 @@ public class actualfoesmove : MonoBehaviour
         m_Follow = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
