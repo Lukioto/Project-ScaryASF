@@ -18,12 +18,15 @@ public class trapitem : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.E) && in_area == true)
-
         {
+
+            move.needle();
+            gameObject.SetActive(false);
+            /*
             move.sprinttime += 5000;
             move.canrun = true;
             gameObject.SetActive(false);
-
+            */
         }
     }
 
