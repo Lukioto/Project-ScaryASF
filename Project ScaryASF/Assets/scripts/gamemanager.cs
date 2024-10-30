@@ -98,7 +98,7 @@ public class gamemanager : MonoBehaviour
         {
             ableToWin = true;
             isGameOver = true;
-            EnableText();
+            StartCoroutine(EnableText());
         }
 
         if (isGameOver == true)
@@ -106,11 +106,6 @@ public class gamemanager : MonoBehaviour
             m_GameState = Gamestate.GOver;
         }
 
-        if (tacoCraze.enabled == true && (Time.time >= disappearTime))
-        {
-            Debug.Log("tacos");
-            tacoCraze.enabled = false;
-        }
     }
 
     void GameStateOver()
@@ -151,14 +146,20 @@ public class gamemanager : MonoBehaviour
         return objecteves == 0;
     }
 
-    public void EnableText()
+    IEnumerator EnableText()
     {
         if (noTacoCraze == false)
         {
             tacoCraze.enabled = true;
-            disappearTime = Time.time + 1f;
             noTacoCraze = true;
+            yield return new WaitForSeconds(2f);
+
+
+            tacoCraze.enabled = false;
         }
+             
+        
+        
 
     }
 }

@@ -22,8 +22,8 @@ public class playermovement : MonoBehaviour
 
     public bool hasneedle = false;
 
-    private bool canrun = true;
-    private float sprinttime = 3000f;
+    public bool canrun = true;
+    public float sprinttime = 3000f;
 
     private float forwardinput;
     private float strafeinput;
