@@ -122,7 +122,7 @@ public class playermovement : MonoBehaviour
         {
             
             movespeed = sprintspeed;
-            sprinttime--;
+            sprinttime -= 5;
             
         }
         
@@ -135,12 +135,12 @@ public class playermovement : MonoBehaviour
 
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            sprintcooldown = 500;
+            sprintcooldown = 300;
         }
 
         else if (sprinttime <= 10)
         {
-            sprintcooldown = 500;
+            sprintcooldown = 300;
             sprinttime = 11f;
             canrun = false;
         }
@@ -151,12 +151,12 @@ public class playermovement : MonoBehaviour
             if (sprinttime < sprintmaxtime && sprintcooldown == 0)
             {
                 canrun = true;
-                sprinttime++;
+                sprinttime += 8;
             }
 
             if(sprintcooldown > 0)
             {
-                sprintcooldown--;
+                sprintcooldown -= 2;
 
             }/*
             else if(canrun == false && sprintcooldown == 0)
