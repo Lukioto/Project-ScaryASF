@@ -140,7 +140,7 @@ public class playermovement : MonoBehaviour
 
         else if (sprinttime <= 10)
         {
-            sprintcooldown = 300;
+            sprintcooldown = 250;
             sprinttime = 11f;
             canrun = false;
         }
