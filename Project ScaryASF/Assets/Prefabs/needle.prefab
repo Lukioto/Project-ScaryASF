@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6727048800509517381}
   - component: {fileID: 6727048800509517380}
   - component: {fileID: 6727048800509517382}
-  - component: {fileID: 6727048800509517377}
   - component: {fileID: 6727048800509517434}
+  - component: {fileID: 2149705398653037991}
   m_Layer: 0
   m_Name: needle
   m_TagString: Untagged
@@ -99,18 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 45.000004, z: 35}
   m_Center: {x: 0, y: -0, z: 0}
---- !u!114 &6727048800509517377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6727048800509517379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1da63919f0ecd847bb0c18af9073748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6727048800509517434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +113,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foe: {fileID: 6727048800509517376}
   Camra: {fileID: 0}
+--- !u!114 &2149705398653037991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727048800509517379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9f86632f9b90e4388956a3a962a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move: {fileID: 0}

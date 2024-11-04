@@ -9700,6 +9700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 762215031}
   health: {fileID: 201421820}
+  itemExplaination: {fileID: 0}
   tacoCraze: {fileID: 1381966376}
   titleText: {fileID: 986155068}
   objectiveCounter: {fileID: 797094523}
@@ -10085,24 +10086,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141486640}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2149705398653037983 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6727048800509517379, guid: dbed47a6a98fe2e4f9f88277445f4e31, type: 3}
-  m_PrefabInstance: {fileID: 4651671501444117468}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2149705398653037991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2149705398653037983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9f86632f9b90e4388956a3a962a816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: {fileID: 2014520561}
 --- !u!1001 &4651671501444117468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10110,6 +10093,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2149705398653037991, guid: dbed47a6a98fe2e4f9f88277445f4e31, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 2014520561}
     - target: {fileID: 6727048800509517376, guid: dbed47a6a98fe2e4f9f88277445f4e31, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10162,6 +10149,5 @@ PrefabInstance:
       propertyPath: Camra
       value: 
       objectReference: {fileID: 1204414047}
-    m_RemovedComponents:
-    - {fileID: 6727048800509517377, guid: dbed47a6a98fe2e4f9f88277445f4e31, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbed47a6a98fe2e4f9f88277445f4e31, type: 3}
