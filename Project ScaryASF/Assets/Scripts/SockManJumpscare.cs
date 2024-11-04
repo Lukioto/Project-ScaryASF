@@ -29,6 +29,5 @@ public class SockManJumpscare : MonoBehaviour
         yield return new WaitForSeconds(1f);
         image.enabled = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
     }
 }

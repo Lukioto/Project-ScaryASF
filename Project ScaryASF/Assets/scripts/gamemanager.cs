@@ -12,6 +12,7 @@ public class gamemanager : MonoBehaviour
 
     public Image bar;
     public Image health;
+    public ItemExplaination itemExplaination;
 
     public TextMeshProUGUI tacoCraze;
     private float disappearTime;
@@ -73,6 +74,11 @@ public class gamemanager : MonoBehaviour
             case Gamestate.GOver:
                 GameStateOver();
                 break;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && itemExplaination.image.enabled == true)
+        {
+            itemExplaination.image.enabled = false;
         }
     }
 
