@@ -197,10 +197,12 @@ public class playermovement : MonoBehaviour
     {
         Debug.Log("start");
         sprinttime += 99999;
+        sprintspeed += 4;
         hasneedle = false;
         canrun = true;
         yield return new WaitForSeconds(15f);
         sprinttime = sprintmaxtime;
+        sprintspeed -= 4;
         Debug.Log("end");
 
     }
