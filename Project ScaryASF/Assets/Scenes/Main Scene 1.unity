@@ -1777,6 +1777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 319043587}
   health: {fileID: 1761551990}
+  tacoCraze: {fileID: 0}
   titleText: {fileID: 206872775}
   objectiveCounter: {fileID: 1883825990}
   player: {fileID: 912556559}
@@ -7519,6 +7520,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 365377387}
+    - target: {fileID: 2910093734419985262, guid: f481dee6ea982a9479e5e2e91b1e5ded, type: 3}
       propertyPath: points.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -9202,6 +9207,10 @@ PrefabInstance:
     - target: {fileID: 1175174245751746239, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175174247104797817, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115f3fc31e820ef42ba51a75814a9836, type: 3}
