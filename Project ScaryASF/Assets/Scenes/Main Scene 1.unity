@@ -6917,7 +6917,8 @@ PrefabInstance:
       propertyPath: actualFoesMove
       value: 
       objectReference: {fileID: 1040531112}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8378215123115280894, guid: 50a3af9f7cbcb1b44928e9809ea7ba05, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 50a3af9f7cbcb1b44928e9809ea7ba05, type: 3}
 --- !u!4 &1282017136 stripped
 Transform:
